@@ -4,7 +4,7 @@ Deploy ML models
 
 # Modules
 
-streamlit, docker , spacy, nltk , pandas
+streamlit, docker , spacy, nltk , pandas, re, string, flair, flask
 
 # Credit
 
