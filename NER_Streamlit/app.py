@@ -5,12 +5,6 @@ import pandas as pd
 import streamlit as st
 import pdftotext # For pdfto text conversion
 import docx2txt # for converting docx to .txt format
-import re
-import string
-from collections import Counter
-import sys
-import pandas as pd
-from collections import defaultdict
 
 # FOR NER
 
@@ -58,38 +52,29 @@ def main():
 
         # Applying NLP ideas
 
-        title1 = ["Agreement on Managed Data Center Services"]
-        title2 = ["Master Services Agreement on the Provision of IT Services",
-                  "Master Services Agreement on the Provision of IT Services (“Agreement“ or “Master Services Agreement”)"]
-        title3 = ["MASTER SERVICES AGREEMENT ON THE PROVISION OF MANAGED SERVICES IN PUBLIC COULDS",
-                  "Master Services Agreement (“Agreement“ or “Master Services Agreement”) on the provision of Managed Services in Public Clouds"]
-        title4 = ["Agreement on the Provision of MANAGED PRINT Services",
-                  "Agreement on the Provision of MPS (Managed Print Services)"]
-        title5 = ["Agreement for Security Operation Center Services"]
-        title6 = ["AGREEMENT ON PROVISIONING OF IT AND COMMUNICATION SERVICES"]
-        title7 = ["Agreement on Managed Data Center Services"]
-        title8 = ["Master Project, Support and Maintenance Agreement"]
-        title9 = ["ENTERPRISE CUSTOMER AGREEMENT"]
-
-        title11 = ["MASTER SERVICE AGREEMENT"]
-
-        suppliers1 = ["TEASYS", "Teasys", "TEASYS GLOBAL INVEST AG", "Teasys Global Invest AG"]
-        suppliers2 = ["FTP", "FTP Deutschland GmbH", "FTP Deutschland GmbH"]
-        suppliers3 = ["Wisniewski & Sohn GmbH", "FBS"]
-        suppliers4 = ["Horizon Deutschland AG", "Horizon", "Harpe", "Harpe Deutschland GmbH"]
-        suppliers5 = ["ADVENTURE SERVICES GMBH", "Adventure Services GmbH", "SWIPERO LIMITED", "Swipero Limited",
-                      "Swipero"]
-
-        clients = ["F.UN", "FUN", "F.UN BUSINESS SERVICES GMBH", "F.UN Business Services GmbH"]
-
+        title1 = ["Agreement on contract1"]
+        title2 = ["Agreement on contract2"]
+        title3 = ["Agreement on contract3"]
+        title4 = ["Agreement on contract4"]
+        title5 = ["Agreement on contract5"]
+        title6 = ["Agreement on contract6"]
+        title7 = ["Agreement on contract7"]
+        title8 = ["Agreement on contract8"]
+        title9 = ["Agreement on contract9"]
+        suppliers1 = ["FACEBOOK", "Facebook", "FACEBOOK GLOBAL INVEST AG", "Facebook Global Invest AG"]
+        suppliers2 = ["BIRD", "BIRDS Deutschland GmbH", "Birds Deutschland GmbH"]
+        suppliers3 = ["Google GmbH", "GOOGLE"]
+        suppliers4 = ["EBAY Deutschland AG", "EBAY", "ebay"]
+        suppliers5 = ["AMAZON SERVICES GMBH", "Amazon Services GmbH", "AMAZON LIMITED", "Amazon Limited"]
+        clients = ["BOL.com", "bol.com", "BOL.COM BUSINESS SERVICES GMBH", "BOL.com Business Services GmbH"]
         dates1 = ["29 September 2018", "01 January 2015", "01.07.2018", " August 2017"]
         dates2 = ["31. July 2018"]
         dates3 = ["termination after a period of 48 months"]
         dates4 = ["31.01.2017", "31.03.2019", "1 October 2018"]
         dates5 = ["31.12.2018", "Apr 11th 2023", "19.01.2020"]
-
         countries1 = ["UK", "Germany", "France", "Italy", "Netherlands", "Russia", "Hungary", "India"]
         countries2 = ["Slovakia", "Czech", "Australia", "Vietnam", "Japan", "Philippines", "Romania"]
+
 
         # Define rulerAll for all entities
         rulerAll = EntityRuler(nlp, overwrite_ents=True)
@@ -208,36 +193,26 @@ def main():
 
         # Applying NLP ideas
 
-        title1 = ["Agreement on Managed Data Center Services"]
-        title2 = ["Master Services Agreement on the Provision of IT Services",
-                  "Master Services Agreement on the Provision of IT Services (“Agreement“ or “Master Services Agreement”)"]
-        title3 = ["MASTER SERVICES AGREEMENT ON THE PROVISION OF MANAGED SERVICES IN PUBLIC COULDS",
-                  "Master Services Agreement (“Agreement“ or “Master Services Agreement”) on the provision of Managed Services in Public Clouds"]
-        title4 = ["Agreement on the Provision of MANAGED PRINT Services",
-                  "Agreement on the Provision of MPS (Managed Print Services)"]
-        title5 = ["Agreement for Security Operation Center Services"]
-        title6 = ["AGREEMENT ON PROVISIONING OF IT AND COMMUNICATION SERVICES"]
-        title7 = ["Agreement on Managed Data Center Services"]
-        title8 = ["Master Project, Support and Maintenance Agreement"]
-        title9 = ["ENTERPRISE CUSTOMER AGREEMENT"]
-
-        title11 = ["MASTER SERVICE AGREEMENT"]
-
-        suppliers1 = ["TEASYS", "Teasys", "TEASYS GLOBAL INVEST AG", "Teasys Global Invest AG"]
-        suppliers2 = ["FTP", "FTP Deutschland GmbH", "FTP Deutschland GmbH"]
-        suppliers3 = ["Wisniewski & Sohn GmbH", "FBS"]
-        suppliers4 = ["Horizon Deutschland AG", "Horizon", "Harpe", "Harpe Deutschland GmbH"]
-        suppliers5 = ["ADVENTURE SERVICES GMBH", "Adventure Services GmbH", "SWIPERO LIMITED", "Swipero Limited",
-                      "Swipero"]
-
-        clients = ["F.UN", "FUN", "F.UN BUSINESS SERVICES GMBH", "F.UN Business Services GmbH"]
-
+        title1 = ["Agreement on contract1"]
+        title2 = ["Agreement on contract2"]
+        title3 = ["Agreement on contract3"]
+        title4 = ["Agreement on contract4"]
+        title5 = ["Agreement on contract5"]
+        title6 = ["Agreement on contract6"]
+        title7 = ["Agreement on contract7"]
+        title8 = ["Agreement on contract8"]
+        title9 = ["Agreement on contract9"]
+        suppliers1 = ["FACEBOOK", "Facebook", "FACEBOOK GLOBAL INVEST AG", "Facebook Global Invest AG"]
+        suppliers2 = ["BIRD", "BIRDS Deutschland GmbH", "Birds Deutschland GmbH"]
+        suppliers3 = ["Google GmbH", "GOOGLE"]
+        suppliers4 = ["EBAY Deutschland AG", "EBAY", "ebay"]
+        suppliers5 = ["AMAZON SERVICES GMBH", "Amazon Services GmbH", "AMAZON LIMITED", "Amazon Limited"]
+        clients = ["BOL.com", "bol.com", "BOL.COM BUSINESS SERVICES GMBH", "BOL.com Business Services GmbH"]
         dates1 = ["29 September 2018", "01 January 2015", "01.07.2018", " August 2017"]
         dates2 = ["31. July 2018"]
         dates3 = ["termination after a period of 48 months"]
         dates4 = ["31.01.2017", "31.03.2019", "1 October 2018"]
         dates5 = ["31.12.2018", "Apr 11th 2023", "19.01.2020"]
-
         countries1 = ["UK", "Germany", "France", "Italy", "Netherlands", "Russia", "Hungary", "India"]
         countries2 = ["Slovakia", "Czech", "Australia", "Vietnam", "Japan", "Philippines", "Romania"]
 
@@ -324,8 +299,6 @@ def main():
         rulerAll.name = 'rulerAll'
         nlp.add_pipe(rulerAll)
 
-
-
         # analysis from loaded file
 
         if st.button("Extract"):
@@ -360,36 +333,26 @@ def main():
 
         # Applying NLP ideas
 
-        title1 = ["Agreement on Managed Data Center Services"]
-        title2 = ["Master Services Agreement on the Provision of IT Services",
-                  "Master Services Agreement on the Provision of IT Services (“Agreement“ or “Master Services Agreement”)"]
-        title3 = ["MASTER SERVICES AGREEMENT ON THE PROVISION OF MANAGED SERVICES IN PUBLIC COULDS",
-                  "Master Services Agreement (“Agreement“ or “Master Services Agreement”) on the provision of Managed Services in Public Clouds"]
-        title4 = ["Agreement on the Provision of MANAGED PRINT Services",
-                  "Agreement on the Provision of MPS (Managed Print Services)"]
-        title5 = ["Agreement for Security Operation Center Services"]
-        title6 = ["AGREEMENT ON PROVISIONING OF IT AND COMMUNICATION SERVICES"]
-        title7 = ["Agreement on Managed Data Center Services"]
-        title8 = ["Master Project, Support and Maintenance Agreement"]
-        title9 = ["ENTERPRISE CUSTOMER AGREEMENT"]
-
-        title11 = ["MASTER SERVICE AGREEMENT"]
-
-        suppliers1 = ["TEASYS", "Teasys", "TEASYS GLOBAL INVEST AG", "Teasys Global Invest AG"]
-        suppliers2 = ["FTP", "FTP Deutschland GmbH", "FTP Deutschland GmbH"]
-        suppliers3 = ["Wisniewski & Sohn GmbH", "FBS"]
-        suppliers4 = ["Horizon Deutschland AG", "Horizon", "Harpe", "Harpe Deutschland GmbH"]
-        suppliers5 = ["ADVENTURE SERVICES GMBH", "Adventure Services GmbH", "SWIPERO LIMITED", "Swipero Limited",
-                      "Swipero"]
-
-        clients = ["F.UN", "FUN", "F.UN BUSINESS SERVICES GMBH", "F.UN Business Services GmbH"]
-
+        title1 = ["Agreement on contract1"]
+        title2 = ["Agreement on contract2"]
+        title3 = ["Agreement on contract3"]
+        title4 = ["Agreement on contract4"]
+        title5 = ["Agreement on contract5"]
+        title6 = ["Agreement on contract6"]
+        title7 = ["Agreement on contract7"]
+        title8 = ["Agreement on contract8"]
+        title9 = ["Agreement on contract9"]
+        suppliers1 = ["FACEBOOK", "Facebook", "FACEBOOK GLOBAL INVEST AG", "Facebook Global Invest AG"]
+        suppliers2 = ["BIRD", "BIRDS Deutschland GmbH", "Birds Deutschland GmbH"]
+        suppliers3 = ["Google GmbH", "GOOGLE"]
+        suppliers4 = ["EBAY Deutschland AG", "EBAY", "ebay"]
+        suppliers5 = ["AMAZON SERVICES GMBH", "Amazon Services GmbH", "AMAZON LIMITED", "Amazon Limited"]
+        clients = ["BOL.com", "bol.com", "BOL.COM BUSINESS SERVICES GMBH", "BOL.com Business Services GmbH"]
         dates1 = ["29 September 2018", "01 January 2015", "01.07.2018", " August 2017"]
         dates2 = ["31. July 2018"]
         dates3 = ["termination after a period of 48 months"]
         dates4 = ["31.01.2017", "31.03.2019", "1 October 2018"]
         dates5 = ["31.12.2018", "Apr 11th 2023", "19.01.2020"]
-
         countries1 = ["UK", "Germany", "France", "Italy", "Netherlands", "Russia", "Hungary", "India"]
         countries2 = ["Slovakia", "Czech", "Australia", "Vietnam", "Japan", "Philippines", "Romania"]
 
@@ -515,35 +478,26 @@ def main():
             return nlp(text)
         # Applying NLP ideas
 
-        title1 = ["Agreement on Managed Data Center Services"]
-        title2 = ["Master Services Agreement on the Provision of IT Services",
-                      "Master Services Agreement on the Provision of IT Services (“Agreement“ or “Master Services Agreement”)"]
-        title3 = ["MASTER SERVICES AGREEMENT ON THE PROVISION OF MANAGED SERVICES IN PUBLIC COULDS",
-                      "Master Services Agreement (“Agreement“ or “Master Services Agreement”) on the provision of Managed Services in Public Clouds"]
-        title4 = ["Agreement on the Provision of MANAGED PRINT Services",
-                      "Agreement on the Provision of MPS (Managed Print Services)"]
-        title5 = ["Agreement for Security Operation Center Services"]
-        title6 = ["AGREEMENT ON PROVISIONING OF IT AND COMMUNICATION SERVICES"]
-        title7 = ["Agreement on Managed Data Center Services"]
-        title8 = ["Master Project, Support and Maintenance Agreement"]
-        title9 = ["ENTERPRISE CUSTOMER AGREEMENT"]
-
-
-        suppliers1 = ["TEASYS", "Teasys", "TEASYS GLOBAL INVEST AG", "Teasys Global Invest AG"]
-        suppliers2 = ["FTP", "FTP Deutschland GmbH", "FTP Deutschland GmbH"]
-        suppliers3 = ["Wisniewski & Sohn GmbH", "FBS"]
-        suppliers4 = ["Horizon Deutschland AG", "Horizon", "Harpe", "Harpe Deutschland GmbH"]
-        suppliers5 = ["ADVENTURE SERVICES GMBH", "Adventure Services GmbH", "SWIPERO LIMITED", "Swipero Limited",
-                          "Swipero"]
-
-        clients = ["F.UN", "FUN", "F.UN BUSINESS SERVICES GMBH", "F.UN Business Services GmbH"]
-
+        title1 = ["Agreement on contract1"]
+        title2 = ["Agreement on contract2"]
+        title3 = ["Agreement on contract3"]
+        title4 = ["Agreement on contract4"]
+        title5 = ["Agreement on contract5"]
+        title6 = ["Agreement on contract6"]
+        title7 = ["Agreement on contract7"]
+        title8 = ["Agreement on contract8"]
+        title9 = ["Agreement on contract9"]
+        suppliers1 = ["FACEBOOK", "Facebook", "FACEBOOK GLOBAL INVEST AG", "Facebook Global Invest AG"]
+        suppliers2 = ["BIRD", "BIRDS Deutschland GmbH", "Birds Deutschland GmbH"]
+        suppliers3 = ["Google GmbH", "GOOGLE"]
+        suppliers4 = ["EBAY Deutschland AG", "EBAY", "ebay"]
+        suppliers5 = ["AMAZON SERVICES GMBH", "Amazon Services GmbH", "AMAZON LIMITED", "Amazon Limited"]
+        clients = ["BOL.com", "bol.com", "BOL.COM BUSINESS SERVICES GMBH", "BOL.com Business Services GmbH"]
         dates1 = ["29 September 2018", "01 January 2015", "01.07.2018", " August 2017"]
         dates2 = ["31. July 2018"]
         dates3 = ["termination after a period of 48 months"]
         dates4 = ["31.01.2017", "31.03.2019", "1 October 2018"]
         dates5 = ["31.12.2018", "Apr 11th 2023", "19.01.2020"]
-
         countries1 = ["UK", "Germany", "France", "Italy", "Netherlands", "Russia", "Hungary", "India"]
         countries2 = ["Slovakia", "Czech", "Australia", "Vietnam", "Japan", "Philippines", "Romania"]
 
@@ -663,36 +617,26 @@ def main():
 
         # Applying NLP ideas
 
-        title1 = ["Agreement on Managed Data Center Services"]
-        title2 = ["Master Services Agreement on the Provision of IT Services",
-                      "Master Services Agreement on the Provision of IT Services (“Agreement“ or “Master Services Agreement”)"]
-        title3 = ["MASTER SERVICES AGREEMENT ON THE PROVISION OF MANAGED SERVICES IN PUBLIC COULDS",
-                      "Master Services Agreement (“Agreement“ or “Master Services Agreement”) on the provision of Managed Services in Public Clouds"]
-        title4 = ["Agreement on the Provision of MANAGED PRINT Services",
-                      "Agreement on the Provision of MPS (Managed Print Services)"]
-        title5 = ["Agreement for Security Operation Center Services"]
-        title6 = ["AGREEMENT ON PROVISIONING OF IT AND COMMUNICATION SERVICES"]
-        title7 = ["Agreement on Managed Data Center Services"]
-        title8 = ["Master Project, Support and Maintenance Agreement"]
-        title9 = ["ENTERPRISE CUSTOMER AGREEMENT"]
-
-
-
-        suppliers1 = ["TEASYS", "Teasys", "TEASYS GLOBAL INVEST AG", "Teasys Global Invest AG"]
-        suppliers2 = ["FTP", "FTP Deutschland GmbH", "FTP Deutschland GmbH"]
-        suppliers3 = ["Wisniewski & Sohn GmbH", "FBS"]
-        suppliers4 = ["Horizon Deutschland AG", "Horizon", "Harpe", "Harpe Deutschland GmbH"]
-        suppliers5 = ["ADVENTURE SERVICES GMBH", "Adventure Services GmbH", "SWIPERO LIMITED", "Swipero Limited",
-                          "Swipero"]
-
-        clients = ["F.UN", "FUN", "F.UN BUSINESS SERVICES GMBH", "F.UN Business Services GmbH"]
-
+        title1 = ["Agreement on contract1"]
+        title2 = ["Agreement on contract2"]
+        title3 = ["Agreement on contract3"]
+        title4 = ["Agreement on contract4"]
+        title5 = ["Agreement on contract5"]
+        title6 = ["Agreement on contract6"]
+        title7 = ["Agreement on contract7"]
+        title8 = ["Agreement on contract8"]
+        title9 = ["Agreement on contract9"]
+        suppliers1 = ["FACEBOOK", "Facebook", "FACEBOOK GLOBAL INVEST AG", "Facebook Global Invest AG"]
+        suppliers2 = ["BIRD", "BIRDS Deutschland GmbH", "Birds Deutschland GmbH"]
+        suppliers3 = ["Google GmbH", "GOOGLE"]
+        suppliers4 = ["EBAY Deutschland AG", "EBAY", "ebay"]
+        suppliers5 = ["AMAZON SERVICES GMBH", "Amazon Services GmbH", "AMAZON LIMITED", "Amazon Limited"]
+        clients = ["BOL.com", "bol.com", "BOL.COM BUSINESS SERVICES GMBH", "BOL.com Business Services GmbH"]
         dates1 = ["29 September 2018", "01 January 2015", "01.07.2018", " August 2017"]
         dates2 = ["31. July 2018"]
         dates3 = ["termination after a period of 48 months"]
         dates4 = ["31.01.2017", "31.03.2019", "1 October 2018"]
         dates5 = ["31.12.2018", "Apr 11th 2023", "19.01.2020"]
-
         countries1 = ["UK", "Germany", "France", "Italy", "Netherlands", "Russia", "Hungary", "India"]
         countries2 = ["Slovakia", "Czech", "Australia", "Vietnam", "Japan", "Philippines", "Romania"]
 
@@ -801,10 +745,6 @@ def main():
             df_ent_dup = df_ent_dup.drop_duplicates(subset=["ENT_LABEL"])
             # Output shown on app
             st.write('Key Entities Found in Contract : ', df_ent_dup)
-
-
-
-
 
 
 if __name__ == '__main__':
