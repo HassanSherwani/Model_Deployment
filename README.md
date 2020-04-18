@@ -6,7 +6,7 @@ Deploy ML models
 
 streamlit, docker , spacy, nltk , pandas, re, string, flair, flask
 
-# GUI
+# App GUI
 
 ![](images/img1.png)
 
