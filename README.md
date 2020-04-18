@@ -8,7 +8,7 @@ streamlit, docker , spacy, nltk , pandas, re, string, flair, flask
 
 # GUI
 
-![]images/img1.png
+![](images/img1.png)
 
 # Credit
 
