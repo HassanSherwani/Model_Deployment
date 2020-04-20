@@ -7,8 +7,8 @@
 Recommended start is miniconda (python 3.6).
 Install dependencies with:
 ```bash
-conda install flask numpy gensim scipy spacy scikit-learn gunicorn
-conda install docx2txt -c conda-forge
+conda install flask numpy gensim pandas spacy 
+conda install docx2txt 
 ```
 **gensim** is optional and needed only if you use topic modeling or word2vec models.
 - Don't forget to python -m spacy download en to install the spaCy language pack.
