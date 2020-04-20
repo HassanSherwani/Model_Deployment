@@ -26,6 +26,10 @@ Expects a raw text, .docx, .txt,.pdf file object, returns html with sentences an
 [{"Text":"Facebook is our supplier and bol.com is client in this example", {"entity":"Facebook"},"label":"Supplier"}]
 
 # Results
+### Input
 
+!["User Interface"](images/img1.png)
 
+### Output
 
+!["User Interface"](images/img2.png)
