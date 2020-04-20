@@ -25,8 +25,7 @@ Expects a raw text, .docx, .txt,.pdf file object, returns html with sentences an
 
 [{"Text":"Facebook is our supplier and bol.com is client in this example", {"entity":"Facebook"},"label":"Supplier"}]
 
+# Results
 
-/api/deliverable-lines [POST]
-Expects text submitted as form key, returns html with sentences and extracted entities 
 
 
