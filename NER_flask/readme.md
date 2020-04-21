@@ -17,14 +17,15 @@ conda install docx2txt
 # API
 
 /api/Text [GET]
-Text should be submitted as phrase key (/api/phrase?phrase=).
+Text should be submitted as phrase key (/api/phrase?phrase=)
+```bash
 [{"raw text": "Facebook is our supplier and bol.com is client in this example".}]
-
+```
 /api/deliverable [POST]
 Expects a raw text, .docx, .txt,.pdf file object, returns html with sentences and highlighted entities:
-
+```bash
 [{"Text":"Facebook is our supplier and bol.com is client in this example", {"entity":"Facebook"},"label":"Supplier"}]
-
+```
 # Results
 ### Input
 
