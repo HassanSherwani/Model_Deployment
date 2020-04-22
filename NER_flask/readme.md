@@ -13,7 +13,11 @@ conda install docx2txt
 **gensim** is optional and needed only if you use topic modeling or word2vec models.
 - Don't forget to python -m spacy download en to install the spaCy language pack.
 
+# How to Run app
 
+```bash
+python3 app.py
+```
 # API
 
 /api/Text [GET]
