@@ -1,4 +1,12 @@
 
+
+Use command 
+
+''' bash
+
+streamlit run app.py
+
+'''
 # App 
 
 ### User interface for APP
