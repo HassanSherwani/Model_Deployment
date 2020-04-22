@@ -1,12 +1,11 @@
 
 
-Use command 
+# Use command to run app
 
-''' bash
+```bash
 
 streamlit run app.py
-
-'''
+```
 # App 
 
 ### User interface for APP
