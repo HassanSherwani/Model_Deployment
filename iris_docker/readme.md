@@ -10,3 +10,15 @@
 
 - pipenv lock -r > requirements.txt
 
+### 3- Create file with a name "Dockerfile"
+
+- check content as given
+
+### 4- Create Docker Image
+
+- sudo docker build -t irisapp:latest .
+
+- to check if docker image is there 
+
+sudo docker images
+
