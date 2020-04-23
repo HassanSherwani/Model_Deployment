@@ -6,7 +6,13 @@ Deploy ML models
 
 streamlit, docker , spacy, nltk , pandas, re, string, flair, flask
 
-Installation
+# Content
+
+- DiabetesML : Using Diabetes classification problem and creating ML model . Additionally, used docker to control Python version
+
+- Drag&Drop App : Creating a drag and drop app using streamlit package
+
+
 
 # Installation
 
