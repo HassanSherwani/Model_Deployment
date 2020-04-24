@@ -12,6 +12,8 @@ streamlit, docker , spacy, nltk , pandas, re, string, flair, flask
 
 - Drag&Drop App : Creating a drag and drop app using streamlit package
 
+- NER_Streamlit: Named Entity Recognition using streamlit package.
+
 
 
 # Installation
