@@ -14,6 +14,8 @@ streamlit, docker , spacy, nltk , pandas, re, string, flair, flask
 
 - NER_Streamlit: Named Entity Recognition using streamlit package.
 
+-  NER_flask : Named Entity Recognition using flask web app
+
 
 
 # Installation
