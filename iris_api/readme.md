@@ -1,0 +1,8 @@
+# Aim of assignment
+
+Creating an API that takes four values from IRIS and predict type of specie from given query
+
+Input: 'sl':5.84,'sw':3.0,'pl':3.75,'pw':1.1
+
+Output: type
+
