@@ -4,7 +4,6 @@ import pandas as pd
 import re
 import os
 import tensorflow as tf
-#from tensorflow.python.framework import ops
 from numpy import array
 from keras.datasets import imdb
 from keras.preprocessing import sequence
@@ -19,9 +18,8 @@ app.config['UPLOAD_FOLDER'] = IMAGE_FOLDER
 def init():
     global model,graph
     # load the pre-trained Keras model
-    model = load_model('sentiment_analysis_model.h5')
+    model = load_model('sentiment_analysis.h5')
     graph = tf.compat.v1.get_default_graph() # for tensorflow 2.0
-    #graph = ops.reset_default_graph()
 
 #########################Code for Sentiment Analysis
 @app.route('/', methods=['GET', 'POST'])
@@ -33,7 +31,7 @@ def home():
 def sent_anly_prediction():
     if request.method=='POST':
         text = request.form['text']
-        sentiment = ''
+        Sentiment = ''
         max_review_length = 500
         word_to_id = imdb.get_word_index()
         strip_special_chars = re.compile("[^A-Za-z0-9 ]+")
