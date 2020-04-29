@@ -1,0 +1,24 @@
+{% extends 'bootstrap/base.html' %}
+{% block content %}
+
+
+        <div class="container">
+            <div class="jumbotron text-centre"">
+                <h2>Sentiment Analysis APP</h2>
+            </div>
+
+            </div>
+
+    <div class="container">
+        <form action="{{url_for('analyse')}}" method="POST" id="myForm">
+            <textarea name="rawtext" row="5" col="5" class=form-control"">
+            </textarea>
+            <input type="submit" name="" value="Submit" class="btn btn-primary">
+            <input type="reset" name="" value="Clear" class="btn btn-outline-primary">
+
+            <a href="{{url_for('index')}}">Reset</a>
+        </form>
+    </div>>
+
+
+{% endblock %}
