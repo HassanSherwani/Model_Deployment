@@ -14,11 +14,24 @@
             <textarea name="rawtext" row="5" col="5" class=form-control"">
             </textarea>
             <input type="submit" name="" value="Submit" class="btn btn-primary">
-            <input type="reset" name="" value="Clear" class="btn btn-outline-primary">
+            <input type="reset" name="" value="Clear" class="btn btn-danger-primary">
 
-            <a href="{{url_for('index')}}">Reset</a>
+            <a href="{{url_for('index')}}" type="button">Reset</a>
         </form>
-    </div>>
+        </div>>
+
+    </div class="container">
+        <div class="card">
+            <div>
+                <p>{{received_text}}</p>>
+
+
+            </div>
+
+        </div>
+
+
+
 
 
 {% endblock %}
