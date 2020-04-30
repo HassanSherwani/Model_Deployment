@@ -20,16 +20,35 @@
         </form>
         </div>>
 
-    </div class="container">
+    <div class="container">
         <div class="card">
             <div>
-                <p>{{received_text}}</p>>
+                <p>{{ received_text }}</p>>
+            </div>>
+            <hr/>
+            <div class="card-body">
+                {% for i in summary %}
+                <li>{{i}}</li>>
+                {% endfor %}
 
-
-            </div>
-
+            </div>>
+             <table class="table table-striped table-dark" >
+  <thead>
+    <tr>
+      <th scope="col">Sentiment</th>
+      <th scope="col">Polarity</th>
+      <th scope="col">Subjectivity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Score:</th>
+      <td>{{blob_sentiment}}</td>
+      <td>{{blob_subjectivity}}</td>
+    </tr>
+  </tbody></table>
         </div>
-
+    </div>
 
 
 
