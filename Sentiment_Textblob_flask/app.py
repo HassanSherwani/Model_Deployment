@@ -13,9 +13,14 @@ Bootstrap(app)
 def index():
 	return render_template('index.html')
 # for analyse
-@app.route('/analyse')
+@app.route('/analyse', methods=["POST"])
 def analyse():
-	return render_template('index.html')
+	if request.method == "POST":
+		rawtext=request.form['rawtext']
+		# NLP and textblob
+		blob=TextBlob(rawtext)
+		received_text2=blob
+	return render_template('index.html', received_text=received_text2)
 
 if __name__ == '__main__':
 	app.run(debug=True)
