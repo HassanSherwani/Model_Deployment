@@ -2,5 +2,5 @@
 Creating Sentiment Analysis for tweets
 
 # Results
-Input: "Text"
+Input: "Text" <br>
 Output: "sentiment type i.e positive/negative" , "Probability Score"
