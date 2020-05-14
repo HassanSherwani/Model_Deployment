@@ -1,0 +1,8 @@
+Contract starts with Title such as Agreement on contract1.
+Data has three supplier name. Supplier as name is considered SUPPLIER, FACEBOOK.facebook,Facebook Global Invest AG if it were operating in Germany.
+ 
+bol.com company is our client.It can also be referred as BOL.COM or bol.com or even BOL.COM BUSINESS SERVICES GMBH if it were operating in Germany.
+
+There are some countries involved in contract. European countries like Italy, Germany, Netherlands, France. Other non-European countries like UK, Vietnam, India are also part of such contracts 
+
+There are some keys dates such as 01.07.2018 , 31. July 2018, 31.01.2017, 19.01.2020 for contract validation. We can expect signature date as start of a contract while termination date at end time of contract. Other dates terms are used interchangeably. 
