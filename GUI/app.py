@@ -1,6 +1,7 @@
 from flask import Flask, render_template, flash, redirect, url_for, session, logging, request
 from flaskext.markdown import Markdown
 from flask_dropzone import Dropzone
+from flask_basicauth import BasicAuth
 
 from script_api import extracts
 from script_json import extract_json
@@ -9,12 +10,16 @@ import os, json, ast
 import glob
 import docx2txt
 import requests
-import json
 from json2html import *
 
 app = Flask(__name__)
+app.config['BASIC_AUTH_USERNAME'] = 'legal'
+app.config['BASIC_AUTH_PASSWORD'] = 'tech'
+app.config['BASIC_AUTH_FORCE'] = True
 
 Markdown(app)
+basic_auth = BasicAuth(app)
+
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 app.config.update(
@@ -38,7 +43,6 @@ def index():
 def extract_metadata():
     return render_template("extract.html")
 
-
 @app.route('/extract', methods=["GET", "POST"])
 def extract():
     if request.method == 'POST':
@@ -52,8 +56,8 @@ def extract():
 
         dict_list = list()
 
-        for i,key in enumerate(json_dict.keys()):
-            json_ = {"KEY":i,"CONFIDENCE":json_dict[key]["CONFIDENCE"], "ENT_DETECT":json_dict[key]["ENT_DETECT"], "ENT_LABEL":json_dict[key]["ENT_LABEL"]}
+        for key in json_dict.keys():
+            json_ = {"CONFIDENCE":json_dict[key]["CONFIDENCE"], "ENT_DETECT":json_dict[key]["ENT_DETECT"], "ENT_LABEL":json_dict[key]["ENT_LABEL"]}
             dict_list.append(json_)
 
         extraction = (result, dict_list, formated_json)
@@ -64,7 +68,6 @@ def extract():
     else:
         return render_template('result.html', rawtext="raw_text", result="result")
 
-
 @app.route('/upload', methods=['POST', 'GET'])
 def upload():
     if request.method == 'POST':
@@ -72,17 +75,14 @@ def upload():
         f.save(os.path.join(app.config['UPLOADED_PATH'], f.filename))
     return render_template('upload.html')
 
-
 @app.route('/documents')
 def documents():
     files = [file for file in glob.glob(PATH_UPLOAD+"*.*")]
     return render_template("documents.html", files=files)
 
-
 @app.route("/saved_extracts")
 def saved_extracts():
     return render_template("saved_extracts.html", files=[1, 2, 3, 4])
-
 
 @app.route("/browser")
 def browser():
@@ -113,7 +113,6 @@ def browser():
 
     return render_template("browser.html", files=ready_files)
 
-
 @app.route("/file/<string:filename>")
 def file(filename):
 
@@ -135,7 +134,7 @@ def read_files(filename):
             output = docx2txt.process(filename)
 
         else:
-            output = "This file cannot be viewed in the browser."
+            output = "Diese Datei kann nicht im Browser angezeigt werden."
     else:
         if str(filename).endswith("txt"):
             with open("uploads/"+filename, "r") as reader:
@@ -145,10 +144,9 @@ def read_files(filename):
             output = docx2txt.process("uploads/"+filename)
 
         else:
-            output = "This file cannot be viewed in the browser."
+            output = "Diese Datei kann nicht im Browser angezeigt werden."
 
     return output
-
 
 @app.route("/saveresult", methods=['GET', 'POST'])
 def saveresult():
@@ -156,6 +154,6 @@ def saveresult():
     return redirect("saved_extracts")
 
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0',port=80)
 
+if __name__ == "__main__":
+    app.run(host='0.0.0.0',port=8000)
