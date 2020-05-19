@@ -13,8 +13,8 @@ import requests
 from json2html import *
 
 app = Flask(__name__)
-app.config['BASIC_AUTH_USERNAME'] = 'legal'
-app.config['BASIC_AUTH_PASSWORD'] = 'tech'
+app.config['BASIC_AUTH_USERNAME'] = 'hassan'
+app.config['BASIC_AUTH_PASSWORD'] = 'sherwani'
 app.config['BASIC_AUTH_FORCE'] = True
 
 Markdown(app)
