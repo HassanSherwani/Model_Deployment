@@ -8,3 +8,4 @@ gunicorn
 flask-markdown
 json2html
 flask_dropzone
+flask_basicauth
