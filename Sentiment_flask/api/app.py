@@ -6,6 +6,9 @@ import os
 import tensorflow as tf
 from numpy import array
 from keras.datasets import imdb
+#from tensorflow.keras.models import sequence
+#from tensorflow.keras.models import load_model
+
 from keras.preprocessing import sequence
 from keras.models import load_model
 
@@ -19,7 +22,7 @@ def init():
     global model,graph
     # load the pre-trained Keras model
     model = load_model('sentiment_analysis.h5')
-    graph = tf.compat.v1.get_default_graph() # for tensorflow 2.0
+    graph = tf.compat.v1.get_default_graph()
 
 #########################Code for Sentiment Analysis
 @app.route('/', methods=['GET', 'POST'])
@@ -56,5 +59,4 @@ def sent_anly_prediction():
 
 if __name__ == "__main__":
     init()
-    app.debug = True
     app.run()
