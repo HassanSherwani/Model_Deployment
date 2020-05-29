@@ -3,4 +3,4 @@ Developing a sentiment analysis api using aws-ecs
 
 # API result
 
-!["User Interface"](images/1.png)
+!["User Interface"](image/1.png)
