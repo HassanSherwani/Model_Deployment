@@ -1,0 +1,13 @@
+Spacy
+nltk
+sklearn
+numpy
+Pandas
+flask-markdown
+flask
+json2html
+flask_dropzone
+tensorflow==1.14
+keras==2.2.5
+
+
