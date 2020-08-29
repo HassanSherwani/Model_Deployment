@@ -2,6 +2,10 @@
 
 Predicing Year of Marriage model deployment with Flask-AWS
 
+# Modules
+
+pip3 install -r requirements.txt <br>
+
 # Steps for Model Building and  hosting local API
 1. Data Preparation
 2. Machine Learning Modelling
