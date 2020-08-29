@@ -20,12 +20,12 @@ Predicing Year of Marriage model deployment with Flask-AWS
 6. Restart apache webserver and Check API status
 7. Launch a website with domain name and host webpage.
 
-# Notes about how to 
+# Notes about how to create ec2 server
 
-Create ec2 server, set appropriate security groups conf and save private key (pem)
-Using puttygen to convert private pem key to ppk (for MAC this is not necessary)
+1.set appropriate security groups conf and save private key (pem)
+2.Using puttygen to convert private pem key to ppk (for MAC this is not necessary)
 
-Login into ec2 server
+3.Login into ec2 server
 
 Commands:
 python3 -V
@@ -37,7 +37,7 @@ sudo apt-get update
 
 sudo pip install flask, flask_cors, sklearn, apache2 , libapache2-mod-wsgi-py3
 
-Configure  /etc/apache2/sites-enabled/000-default.conf
+4.Configure  /etc/apache2/sites-enabled/000-default.conf
 
 ------- Apache Host file configuration
 ------- file: /etc/apache2/sites-enabled/000-default.conf add this below content 
@@ -62,11 +62,11 @@ sys.path.insert(0, ‘/home/ubuntu/mlapp’)
 from app import app as application
 ------------
 
-copy app.py and predict_model.ml files to EC2  /home/ubuntu/mlapp
+5.copy app.py and predict_model.ml files to EC2  /home/ubuntu/mlapp
 (recommended winscp app in windows, scp command line in Mac)
 
 sudo apachectl restart
 
-On succesful deployment, below url should work and return predicted age of marriage.
+6.On succesful deployment, below url should work and return predicted age of marriage.
 http://<your API public ip>/predict?gender=1&caste=2&religion=2&mother_tongue=5&country=4&height_cms=176
 
