@@ -1,0 +1,9 @@
+Flask
+flask_cors
+flasgger
+request
+pandas
+numpy
+Sklearn
+joblib
+pickle-mixin
